@@ -21,6 +21,8 @@ mongoose
   });
 
 app.use("/product", require("./routes/product"));
+app.use("/", require("./routes/user"));
+
 app.use(errorHandler);
 
 app.listen(PORT, () => {

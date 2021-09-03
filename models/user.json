@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Chukwuemeka Chemazu",
+    "email": "publiser@mail.com",
+    "role": "publisher",
+    "password": "123456789"
+  },
+  {
+    "name": "First Admin",
+    "email": "admin@mail.com",
+    "role": "admin",
+    "password": "123456789"
+  },
+  {
+    "name": "Second Admin",
+    "email": "secondAdmin@mail.com",
+    "role": "admin",
+    "password": "123456789"
+  },
+  {
+    "name": "Third Admin",
+    "email": "thirdAdmin@mail.com",
+    "role": "admin",
+    "password": "123456789"
+  },
+  {
+    "name": "Casual User",
+    "email": "user@mail.com",
+    "role": "user",
+    "password": "123456789"
+  },
+  {
+    "name": "Second User",
+    "email": "secondUser@mail.com",
+    "role": "user",
+    "password": "123456789"
+  },
+  {
+    "name": "third User",
+    "email": "thirdUser@mail.com",
+    "role": "user",
+    "password": "123456789"
+  }
+]

@@ -28,10 +28,36 @@ exports.getProduct = async (req, res, next) => {
   try {
     const product = await Product.findById(id);
     if (!product) {
-      next(new ErrorResponse(`cant fetch Product with id ${id}`, 404));
+      next(new ErrorResponse(`cant fetch Product with id of ${id}`, 400));
     }
     res.status(201).json({ success: true, data: product });
   } catch (err) {
-    next(new ErrorResponse(` ${err.message}`, 404));
+    next(new ErrorResponse(` ${err.message}`, 400));
+  }
+};
+
+exports.updateProduct = async (req, res, next) => {
+  try {
+    const product = await Product.findByIdAndUpdate(req.params.id, req.body);
+    if (!product) {
+      next(new ErrorResponse(`cant update Product with id of ${id}`, 400));
+    }
+    res.status(201).json({ success: true, data: product });
+  } catch (err) {
+    next(new ErrorResponse(` ${err.message}`, 400));
+  }
+};
+
+exports.deleteProduct = async (req, res, next) => {
+  try {
+    const product = await Product.findByIdAndDelete(req.params.id, req.body);
+    if (!product) {
+      next(new ErrorResponse(`cant delete Product with id of ${id}`, 400));
+    }
+    res
+      .status(201)
+      .json({ success: true, data: `${product._id} sucessfully deleted` });
+  } catch (err) {
+    next(new ErrorResponse(` ${err.message}`, 400));
   }
 };
